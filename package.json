@@ -106,7 +106,8 @@
     "watch": "watch-run -p data/countries/*.yaml npm run yaml",
     "webpack": "webpack",
     "webpack:analyze": "webpack",
-    "yaml": "node scripts/holidays2json.js"
+    "yaml-comment": "https://gist.github.com/henrik/1688572 + US,CA,AU",
+    "yaml": "node scripts/holidays2json.js -p AT,BE,HR,BG,CY,CZ,DK,EE,FI,FR,DE,GR,HU,IE,IT,LV,LT,LU,MT,NL,PL,PT,RO,SK,SI,ES,SE,GB,US,CA,AU --min"
   },
   "husky": {
     "hooks": {
