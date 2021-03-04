@@ -17,13 +17,18 @@ def write_json(data,filename):
     with open (filename,'w') as outfile:
         json.dump(data,outfile,indent=4,sort_keys=True)
 
+def write_file(data,filename):
+    with open (filename,'w') as outfile:
+        for a in data:
+            outfile.write(""+str(a)+"\n")
+
 def load_all():
     regions = read_json()
     keys = sorted(regions)
     for k in keys:
         print('%s' % k)
-    write_json(regions,"regions-and-subregions.json")
-
+    #write_json(regions,"regions-and-subregions.json")
+    write_file(regions,"regions-and-subregions.txt")
 
 if __name__ == '__main__':
     load_all()
